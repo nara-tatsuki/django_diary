@@ -1,6 +1,35 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Diary App by Django</h1>
-<h2><a href="{% url 'diary:diary_create' %}">日記の投稿</a></h2>
-<h2><a href="{% url 'diary:diary_list' %}">日記の一覧</a></h2>
+{% load static %}
+<div class="container-fluid mt-5">
+    <div class="image-container">
+        <img src="{% static 'images/image.jpg' %}" class="img-fluid" alt="Header Image">
+    </div>
+    <h1 class="display-6 text-center e-Nikki">e-Nikki</h1>
+    <hr class="my-4">
+    <h2 class="display-6 text-center subtitle">あなたの素晴らしい日常の記録を残しませんか？</h2>
+    <h4 class="display-6 text-center maintext">e-Nikkiは日々の記録を画像で残す</h4>
+    <div class="row justify-content-center">
+        <div class="col-md-6 mb-4">
+            <div class="card mb-3 range rounded">
+                <div class="card-body text-center">
+                    <h5 class="card-title">日記の投稿</h5>
+                    <br><br><br>
+                    <a href="{% url 'diary:diary_create' %}" class="btn btn-success">新規作成</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-6 mb-4">
+            <div class="card mb-3 range rounded">
+                <div class="card-body text-center">
+                    <h5 class="card-title">日記の一覧</h5>
+                    <br><br><br>
+                    <a href="{% url 'diary:diary_list' %}" class="btn btn-success">過去の日記</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

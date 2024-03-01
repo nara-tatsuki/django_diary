@@ -1,0 +1,73 @@
+/* base.html */
+.nav-link {
+    font-size: 14px; /* リンクの文字サイズを小さくする */
+}
+
+.custom-navbar {
+    background-color: #4caf50 !important;
+}
+
+body {
+    background-color: #E0EBAF;
+}
+
+.navbar-logo{
+    max-width: 2.5%; /* 画像の最大幅を50%に設定 */
+    height: auto; /* 高さを自動調整 */
+    display: block; /* インライン要素からブロック要素に変更 */
+    margin-right:10px; 
+}
+
+.nav-link{
+    font-weight: bold;
+}
+
+/* index.html */
+.e-Nikki {
+    font-weight: bold;
+    color:#0ec97b;
+    font-size: 3em;
+}
+
+.image-container {
+    text-align: center; /* 中央揃え */
+}
+
+.image-container img {
+    max-width: 8%; /* 画像の最大幅を50%に設定 */
+    height: auto; /* 高さを自動調整 */
+    display: block; /* インライン要素からブロック要素に変更 */
+    margin: 0 auto; /* 左右の余白を自動で設定し、中央に配置 */
+    margin-bottom: 10px;
+}
+
+hr.my-4 {
+    border: 1px solid #4caf50; /* 線の太さを2pxに設定（必要に応じて調整） */
+}
+
+.subtitle{
+    font-weight: bold;
+    font-family: 'Your_Custom_Font', sans-serif;
+    color: #4caf50;
+    margin-top: 100px; /* 上側のマージンを広げる */
+    margin-bottom: 10px; /* 下側のマージンを広げる */
+}
+
+.maintext{
+    font-weight: bold;
+    font-family: 'Your_Custom_Font', sans-serif;
+    margin-bottom: 100px; /* 下側のマージンを広げる */
+}
+
+.card-title{
+    font-weight: bold;
+    color: #4caf50;
+}
+
+.btn-rounded {
+    border-radius: 20px; /* 丸みの大きさを調整する値を設定*/
+}
+
+.range{
+    height: 300px;
+}

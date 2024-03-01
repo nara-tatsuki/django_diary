@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html lang="jp">
 {% bootstrap_css %}
+{% load static %}
 <head>
     <meta charset="UTF-8">
-    <title>MyDjangoApp</title>
+    <title>e-Nikki</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-<a href="{% url 'account_logout' %}">ログアウト</a>
-{% block content %}
-{% endblock %}
+    <nav class="navbar navbar-expand-md navbar-light custom-navbar">
+        <img src="{% static 'images/image.jpg' %}" alt="Logo" class="navbar-logo">
+        <a class="navbar-brand" href="{% url 'diary:index' %}" style="font-family: 'Comic Sans MS', cursive; font-size: 24px; color: white;">e-Nikki</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/registration">登録情報</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{% url 'account_logout' %}">ログアウト</a>
+                </li>
+            </ul>
+        </div>
+    </nav>    
+
+    <div class="container">
+            {% block content %}
+            {% endblock %}
+    </div>
 </body>
 </html>
